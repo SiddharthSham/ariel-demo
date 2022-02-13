@@ -1,9 +1,9 @@
-import { ClientOverview } from "../../containers/client/overview";
+// import { ClientOverview } from "../../containers/client/overview";
 
 const ClientOverviewPage = () => {
   return (
     <>
-      <ClientOverview />
+      {/* <ClientOverview /> */}
     </>
   );
 };
