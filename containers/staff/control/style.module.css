@@ -1,0 +1,111 @@
+.pageWrapper {
+  width: 1124px;
+  padding-top: 24px;
+  margin-left: 338px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  position: relative;
+}
+
+.sectionTitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #808191;
+  margin-bottom: 17px;
+}
+
+.houseItem {
+  border-radius: 28.1217px 0px 0px 28.1217px;
+  width: 527px;
+  padding: 30px 23px;
+
+  display: flex;
+  gap: 33px;
+  align-items: center;
+
+  font-size: 20.2972px;
+  line-height: 122%;
+  color: #11142d;
+  cursor: pointer;
+}
+
+.houseItem:first-of-type {
+  background: #f8f8f8;
+  pointer-events: none;
+}
+
+.houseItem:hover {
+  background: #f8f8f877;
+}
+
+.houseItem.active {
+  background: #f8f8f8;
+  pointer-events: none;
+}
+
+.houseImg {
+  width: 101.49px;
+  height: 101.49px;
+  border-radius: 8.6988px;
+  background-color: gray;
+}
+
+.houseCity {
+  color: #8a8eae;
+}
+
+/* controls */
+
+.controls {
+  background: #f8f8f8;
+  border-radius: 28.1217px;
+  width: 610px;
+  height: 790px;
+
+  position: absolute;
+  top: 102px;
+  right: 0px;
+
+  padding: 32px;
+}
+
+.controlsTitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #808191;
+  margin-bottom: 50px;
+}
+
+.controlList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.controlItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controlLabel {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -1px;
+  color: #11142d;
+}
+
+.controlAction {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #808191;
+}
