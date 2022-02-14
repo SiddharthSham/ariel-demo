@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { useState } from "react";
@@ -11,7 +12,7 @@ export const Sidenav = ({ links = [] }) => {
   return (
     <>
       <nav className={S.nav}>
-        <div  id="logo">
+        <div id="logo">
           <Link passHref href="/">
             <div className={S.navLogo}>
               <div className={S.navLogoItem}>
@@ -79,7 +80,14 @@ export const Sidenav = ({ links = [] }) => {
           )}
         </ul>
         <div className={S.navProfile}>
-          <div className={S.navPhoto}></div>
+          <div className={S.navPhoto}>
+            <Image
+              src="/staff/jonnana.png"
+              alt="Picture of the person"
+              width={200}
+              height={200}
+            />
+          </div>
           <div>Jonnana Salter</div>
         </div>
       </nav>
