@@ -13,7 +13,9 @@ export const Sidenav = ({ links = [] }) => {
       <nav className={S.nav}>
         <div className={S.navLogo} id="logo">
           <div></div>
-          <div>Ariel</div>
+          <Link passHref href="/">
+            <div>Ariel</div>
+          </Link>
         </div>
         <ul role="list">
           {links.map((item, i) =>

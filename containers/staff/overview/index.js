@@ -1,11 +1,12 @@
 import { StaffSidenav } from "../../../components/staff/sidenav";
+import { PageWrapper } from "../../../components/common/pageWrapper";
 import S from "./style.module.css";
 
 export const StaffOverviewPanel = () => {
   return (
     <>
       <StaffSidenav />
-      <main className={S.pageWrapper}>
+      <PageWrapper>
         <header>
           <div>Hi Jonathon Salter,</div>
           <h1>Welcome back</h1>
@@ -117,7 +118,7 @@ export const StaffOverviewPanel = () => {
             </ul>
           </div>
         </section>
-      </main>
+      </PageWrapper>
     </>
   );
 };

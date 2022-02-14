@@ -1,4 +1,6 @@
 import { StaffSidenav } from "../../../components/staff/sidenav";
+import { PageWrapper } from "../../../components/common/pageWrapper";
+
 import S from "./style.module.css";
 
 import { Switch } from "@rebass/forms";
@@ -31,7 +33,7 @@ const Switchable = () => {
           width: "60px",
           height: "25px",
           border: "none",
-          transition: "background-color 0.2s ease-out"
+          transition: "background-color 0.2s ease-out",
         }}
         className={S.switch}
         checked={switched}
@@ -87,7 +89,7 @@ export const StaffControlPanel = () => {
   return (
     <>
       <StaffSidenav />
-      <main className={S.pageWrapper}>
+      <PageWrapper>
         <header>
           <div>Hi Jonathon Salter,</div>
           <h1>Welcome back</h1>
@@ -144,7 +146,7 @@ export const StaffControlPanel = () => {
             </div>
           </div>
         </div>
-      </main>
+      </PageWrapper>
     </>
   );
 };
