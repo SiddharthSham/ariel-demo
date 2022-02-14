@@ -2,13 +2,16 @@ import { ClientSidenav } from "../../../components/client/sidenav";
 import { PageWrapper } from "../../../components/common/pageWrapper";
 
 import S from "./style.module.css";
+import Image from "next/image";
 
 const CARETAKERS = [
-  { name: "Angela Ken", role: "Caretaker", img: false },
-  { name: "Desly Wallace", role: "Caretaker", img: false },
+  { name: "Angela Ken", role: "Caretaker", img: "/client/angela.png" },
+  { name: "Desly Wallace", role: "Caretaker", img: "/client/angela.png" },
 ];
 
-const FRIENDS = [{ name: "Desly Wallace", role: "Friend", img: false }];
+const FRIENDS = [
+  { name: "Desly Wallace", role: "Friend", img: "/staff/bob.png" },
+];
 
 export const ClientChat = () => {
   return (
@@ -26,7 +29,14 @@ export const ClientChat = () => {
           <ul className={S.houseWrapper}>
             {CARETAKERS.map((item, i) => (
               <li className={S.houseItem} key={i}>
-                <div className={S.houseImg}></div>
+                <div className={S.houseImg}>
+                  <Image
+                    src={item.img}
+                    alt="Picture"
+                    width={200}
+                    height={200}
+                  />
+                </div>
                 <div className={S.houseDetails}>
                   <div className={S.houseName}>{`${item.name}`}</div>
                   <div className={S.houseCity}>{item.role}</div>
@@ -41,7 +51,14 @@ export const ClientChat = () => {
           <ul className={S.houseWrapper}>
             {FRIENDS.map((item, i) => (
               <li className={S.houseItem} key={i}>
-                <div className={S.houseImg}></div>
+                <div className={S.houseImg}>
+                  <Image
+                    src={item.img}
+                    alt="Picture"
+                    width={200}
+                    height={200}
+                  />
+                </div>
                 <div className={S.houseDetails}>
                   <div className={S.houseName}>{`${item.name}`}</div>
                   <div className={S.houseCity}>{item.role}</div>
@@ -56,7 +73,14 @@ export const ClientChat = () => {
           <div className={S.controlsTitle}>Chat</div>
           <div className={S.chatbox}>
             <div className={`${S.msg} ${S.iconMsg} ${S.from}`}>
-              <div className={S.msgIcon}></div>
+              <div className={S.msgIcon}>
+                <Image
+                  src="/client/bread.png"
+                  alt="Picture"
+                  width={200}
+                  height={200}
+                />
+              </div>
               <div>Food Please</div>
             </div>
             <div className={`${S.msg} ${S.txtMsg} ${S.to}`}>
@@ -73,23 +97,58 @@ export const ClientChat = () => {
               <div className={S.quickActionTitle}>How are you feeling?</div>
               <ul className={S.quickActionItem}>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/beaming-face-with-smiling-eyes.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
                   <div className={S.quickActionLabel}>Happy</div>
                 </li>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/disappointed-face.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
                   <div className={S.quickActionLabel}>Sad</div>
                 </li>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/confounded-face.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
                   <div className={S.quickActionLabel}>Anxiety</div>
                 </li>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/face-with-medical-mask.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
                   <div className={S.quickActionLabel}>Unwell</div>
                 </li>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/hushed-face-2.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
                   <div className={S.quickActionLabel}>Surprised</div>
                 </li>
               </ul>
@@ -98,24 +157,48 @@ export const ClientChat = () => {
               <div className={S.quickActionTitle}>Need anything?</div>
               <ul className={S.quickActionItem}>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
-                  <div className={S.quickActionLabel}>Happy</div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/tropical-drink.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <div className={S.quickActionLabel}>Ask for drink</div>
                 </li>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
-                  <div className={S.quickActionLabel}>Sad</div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/hamburger-3.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <div className={S.quickActionLabel}>Tasty Meal</div>
                 </li>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
-                  <div className={S.quickActionLabel}>Anxiety</div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/bread.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <div className={S.quickActionLabel}>Ask for food</div>
                 </li>
                 <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
-                  <div className={S.quickActionLabel}>Unwell</div>
-                </li>
-                <li className={S.quickAction}>
-                  <div className={S.quickActionIcon}></div>
-                  <div className={S.quickActionLabel}>Surprised</div>
+                  <div className={S.quickActionIcon}>
+                    <Image
+                      src="/client/pill.png"
+                      alt="Picture"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <div className={S.quickActionLabel}>Medicine</div>
                 </li>
               </ul>
             </div>

@@ -5,16 +5,47 @@ import S from "./style.module.css";
 
 import { Switch } from "@rebass/forms";
 import { useState } from "react";
+import Image from "next/image";
 
 const HOUSE_DATA = [
-  { house: 940, area: "Pint Street", city: "Caboolture north, QL", img: false },
-  { house: 11, area: "Sunflower Cresent", city: "Narangba", img: false },
+  {
+    house: 940,
+    area: "Pint Street",
+    city: "Caboolture north, QL",
+    img: "/staff/h-1.png",
+  },
+  {
+    house: 11,
+    area: "Sunflower Cresent",
+    city: "Narangba",
+    img: "/staff/h-2.png",
+  },
 
-  { house: 940, area: "Pint Street", city: "Caboolture north, QL", img: false },
-  { house: 11, area: "Sunflower Cresent", city: "Narangba", img: false },
+  {
+    house: 940,
+    area: "Pint Street",
+    city: "Caboolture north, QL",
+    img: "/staff/h-1.png",
+  },
+  {
+    house: 11,
+    area: "Sunflower Cresent",
+    city: "Narangba",
+    img: "/staff/h-2.png",
+  },
 
-  { house: 940, area: "Pint Street", city: "Caboolture north, QL", img: false },
-  { house: 11, area: "Sunflower Cresent", city: "Narangba", img: false },
+  {
+    house: 940,
+    area: "Pint Street",
+    city: "Caboolture north, QL",
+    img: "/staff/h-1.png",
+  },
+  {
+    house: 11,
+    area: "Sunflower Cresent",
+    city: "Narangba",
+    img: "/staff/h-2.png",
+  },
 ];
 
 const Switchable = () => {
@@ -101,7 +132,14 @@ export const StaffControlPanel = () => {
           <ul className={S.houseWrapper}>
             {HOUSE_DATA.map((item, i) => (
               <li className={S.houseItem} key={i}>
-                <div className={S.houseImg}></div>
+                <div className={S.houseImg}>
+                  <Image
+                    src={item.img}
+                    alt="Picture of home"
+                    width={120}
+                    height={120}
+                  />
+                </div>
                 <div className={S.houseDetails}>
                   <div
                     className={S.houseName}

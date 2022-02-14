@@ -35,11 +35,14 @@
 }
 
 .summaryClientPhoto {
-  background: gray;
   filter: drop-shadow(0px 4.39995px 26.3997px rgba(0, 0, 0, 0.09));
   width: 57px;
   height: 57px;
   border-radius: 50%;
+}
+
+.summaryClientPhoto img {
+  transform: scale(2, 2);
 }
 
 .summaryClientName {
@@ -117,6 +120,12 @@
   background: #ea5658;
 }
 
+.btnIcon,
+.btnIcon svg {
+  min-width: 21px;
+  height: 21px;
+}
+
 .logWrapper {
   min-width: 610px;
 }
@@ -157,6 +166,15 @@
   width: 74px;
   height: 74px;
   border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fireAlertIcon svg {
+  width: 24.95px;
+  height: 28.5px;
 }
 
 .stats {
@@ -186,6 +204,11 @@
   align-items: center;
 }
 
+.statIcon {
+  width: 94.02px;
+  height: 94px;
+}
+
 .statData {
   font-weight: 500;
   font-size: 25.0364px;
@@ -202,4 +225,14 @@
   color: #808191;
   min-width: fit-content;
   display: inline-block;
+}
+
+.sensorWrapper .statIcon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 24px;
+}
+
+.statIcon svg {
+  max-height: 100%;
 }

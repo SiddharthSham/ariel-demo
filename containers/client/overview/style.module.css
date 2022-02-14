@@ -19,11 +19,14 @@
 }
 
 .summaryClientPhoto {
-  background: gray;
   filter: drop-shadow(0px 4.39995px 26.3997px rgba(0, 0, 0, 0.09));
   width: 57px;
   height: 57px;
   border-radius: 50%;
+}
+
+.summaryClientPhoto img {
+  transform: scale(2);
 }
 
 .summaryClientName {
@@ -91,6 +94,12 @@
   text-align: center;
   color: #ffffff;
   width: 100%;
+}
+
+.btnIcon,
+.btnIcon svg {
+  min-width: 21px;
+  height: 21px;
 }
 
 .btnLabel {
@@ -174,6 +183,14 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.requestIcon img {
+  width: 50px;
+  height: 50px;
 }
 
 .requestLabel {
@@ -188,4 +205,15 @@
 
 .mxAuto {
   margin: 0 auto;
+}
+
+.statIcon {
+  width: 94.02px;
+  height: 94px;
+}
+
+.sensorWrapper .statIcon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 24px;
 }
